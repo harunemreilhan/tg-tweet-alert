@@ -3,7 +3,7 @@ import json
 import requests
 import telebot
 
-BOT_TOKEN = "5874063359:AAGTAAxCAqOfUmgDsNWYNRaybjhtq9HH_h0"
+BOT_TOKEN = "5877935196:AAGhsFMVWf8oWahciAZ0Gu_diQ5JyCsOhd8"
 bot = telebot.TeleBot(BOT_TOKEN)
 tgbot_token = BOT_TOKEN
 
