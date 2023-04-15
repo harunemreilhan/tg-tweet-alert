@@ -3,9 +3,12 @@ import json
 import requests
 import telebot
 
-BOT_TOKEN = "5877935196:AAGhsFMVWf8oWahciAZ0Gu_diQ5JyCsOhd8"
+BOT_TOKEN = "5874063359:AAGTAAxCAqOfUmgDsNWYNRaybjhtq9HH_h0"
+
 bot = telebot.TeleBot(BOT_TOKEN)
+
 tgbot_token = BOT_TOKEN
+
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -24,6 +27,14 @@ def addkeywords(message):
     bot.send_message(message.chat.id, "Thanks")
     group_id = int(f"{message.chat.id}")
     start()
+
+@bot.message_handler(commands=['stop'])
+def start(message):
+    sent = bot.send_message(message.chat.id, 'Okay')
+    stop() 
+
+def stop():
+    bot.stop_polling()
 
 
 def start():
@@ -97,5 +108,7 @@ def start():
     if __name__ == "__main__":
         main()
 
-if __name__ == "__main__":
+i = 0
+i += 1
+if i == 2:
     bot.polling()
