@@ -91,10 +91,7 @@ def start():
             tweet_list.clear()
 
     def send_message(message):
-        response = requests.post(
-            url='https://api.telegram.org/bot{0}/{1}'.format(tgbot_token, "sendMessage"),
-            data={'chat_id': group_id, 'text': message}
-        ).json()
+        bot.send_message(group_id, message)
 
 
     if __name__ == "__main__":
