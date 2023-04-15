@@ -1,4 +1,4 @@
 pyTelegramBotAPI==4.10.0
 pyTelegramBotAPI==4.10.0
 Requests==2.28.2
-twint==2.1.20
+twint==2.1.21
