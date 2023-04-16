@@ -1,6 +1,5 @@
 import twint
 import json
-import requests
 import telebot
 
 BOT_TOKEN = "5874063359:AAGTAAxCAqOfUmgDsNWYNRaybjhtq9HH_h0"
@@ -28,13 +27,14 @@ def addkeywords(message):
     group_id = int(f"{message.chat.id}")
     start()
 
-@bot.message_handler(commands=['stop'])
-def start(message):
+@bot.message_handler(commands=['stop']) 
+def stop_main(message):
+    stop1 = 1
     sent = bot.send_message(message.chat.id, 'Okay')
     stop() 
 
 def stop():
-    bot.stop_polling()
+    stop1 += 1
 
 
 def start():
@@ -108,7 +108,5 @@ def start():
     if __name__ == "__main__":
         main()
 
-i = 0
-i += 1
-if i == 2:
-    bot.polling()
+
+bot.polling()
