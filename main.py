@@ -2,7 +2,7 @@ import twint
 import json
 import telebot
 
-BOT_TOKEN = "5874063359:AAGTAAxCAqOfUmgDsNWYNRaybjhtq9HH_h0"
+BOT_TOKEN = "BOT_TOKEN"
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
